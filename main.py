@@ -1,5 +1,6 @@
-import os
 from UsbReader import UsbReader
+from ControlGPIO import ControlGPIO
+
 def main():
   reader = UsbReader()
   reader.createDirectory()
@@ -15,4 +16,12 @@ def main():
   reader.umountUSB()
 
 if __name__ == "__main__":
-  main()
+  try:
+      gpio = ControlGPIO()
+      gpio.blink(0.5, 10)
+  except KeyboardInterrupt:
+      print("Salida forzada")
+  finally:
+    gpio.exit()
+  
+  #main()

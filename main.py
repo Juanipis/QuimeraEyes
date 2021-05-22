@@ -1,6 +1,6 @@
 from UsbReader import UsbReader
 from ControlGPIO import ControlGPIO
-
+from ActionsExecuter import ActionsExecuter
 def main():
   reader = UsbReader()
   reader.createDirectory()
@@ -18,7 +18,16 @@ def main():
 if __name__ == "__main__":
   try:
       gpio = ControlGPIO()
-      gpio.blink(0.5, 10)
+      diccionario = {
+        "type": 0,
+        "action":0,
+        "time":0.2,
+        "repeat": 19
+      }
+      #gpio.blink(2,3)
+      Ejecutor = ActionsExecuter(diccionario, gpio)
+      Ejecutor.setCiclo()
+      
   except KeyboardInterrupt:
       print("Salida forzada")
   finally:

@@ -9,12 +9,11 @@ class ControlGPIO():
       GPIO.setup(pinNumber, GPIO.OUT)
       self.tiempo = time
     
-    def blink(self,time, veces):
-      for item in range(veces):
-        GPIO.output(self.pinNumber, True)
-        self.tiempo.sleep(time)
-        GPIO.output(self.pinNumber, False)
-        self.tiempo.sleep(time)
+    def encenderLed(self):
+      GPIO.output(self.pinNumber, True)
     
+    def apagarLed(self):
+      GPIO.output(self.pinNumber, False)
+      
     def exit(self):
         GPIO.cleanup()  

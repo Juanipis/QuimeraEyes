@@ -34,7 +34,6 @@ class ActionsExecuter(object):
     
     def cicloFor(self,time,repeticiones):
       for i in range(repeticiones):
-        print(i)
         self.setActions(0)
         self.time.sleep(time)
         self.setActions(1)

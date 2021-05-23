@@ -24,7 +24,6 @@ if __name__ == "__main__":
         "time":0.2,
         "repeat": 19
       }
-      #gpio.blink(2,3)
       Ejecutor = ActionsExecuter(diccionario, gpio)
       Ejecutor.setCiclo()
       

@@ -30,3 +30,6 @@ python3 main.py
 👨‍💻 Juan Pablo Díaz Correa - [@Juanipis](https://github.com/Juanipis) - juan.diaz73@eia.edu.co
 
 👨‍💻 Juan Sebastián Salazar Gómez - [@Khaalanidd](https://github.com/Khaalanidd) - juan.salazar23@eia.edu.co 
+
+#### Poster 🧩
+![Poster de propuesta](https://raw.githubusercontent.com/Juanipis/QuimeraEyes/master/assets/Poster.png)

@@ -6,7 +6,11 @@ class UsbReader():
     self.BASE_DIRECTORY = '/media/quimeraEyes'
     
     #Direcotrios según su label de usb
-    self.USB_LABEL_DIR = {'CICLO_FOR': '/media/quimeraEyes/CICLO_FOR'}
+    self.USB_LABEL_DIR = {'CICLO_FOR': '/media/quimeraEyes/CICLO_FOR',
+                          'ACCION' : '/media/quimeraEyes/ACCION',
+                          'TIEMPO' : '/media/quimeraEyes/TIEMPO',
+                          'REPETICION' : '/media/quimeraEyes/REPETICION',
+                          }
       
   def createDirectory(self): #FIRST COMMAND
     
@@ -56,7 +60,9 @@ class UsbReader():
     devuelve la ruta completa del archivo si está en el directorio
   '''
   def findArchive(self, dictRutaArchivos, nombreArchivo=''): #
+    listaArchivos = []
     for ruta in dictRutaArchivos:
       for archivo in dictRutaArchivos[ruta]:
         if(archivo == nombreArchivo):
-          return ruta + '/' + archivo
+          listaArchivos.append(f"{ruta}/{archivo}")
+    return listaArchivos

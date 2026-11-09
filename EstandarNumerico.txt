@@ -1,0 +1,10 @@
+Numeracion ciclos USB
+
+type 0: crear ciclo
+    Tipo ciclo: 
+        0: ciclo for
+        1: ciclo while
+        2: ciclo do while 
+type 1: definir accion que se desarrolla en el ciclo
+type 2: definir numero de repeticiones del ciclo
+type 3: definir tiempo entre repeticiones
